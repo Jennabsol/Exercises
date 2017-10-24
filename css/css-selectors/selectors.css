@@ -1,0 +1,68 @@
+header {
+    border: 1px solid goldenrod
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  nav li {
+    float: left;;
+  }
+  
+  nav a {
+    display: block;
+    padding: 8px;
+  }
+  
+  .disabled {
+    color: grey;
+  }
+  /* This means child of a!  */
+  a .disabled {
+    color: purple
+  }
+  /* This means class with in a! */
+  a.disabled {
+    color: purple
+  }
+  
+  .active {
+    color: yellow
+  }
+   
+  .parent div:first-child { 
+    color: red; 
+  }
+    
+  
+  .parent div:nth-last-child(2) {
+    color: blue;
+  }
+  
+  .parent h4:nth-child(2) {
+    background-color: red;
+  }
+  
+  .parent h4:last-child {
+    background-color: blue;
+  }
+  
+  .grandparent > h4 {
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  
+  .promo {
+    color: gold;
+    font-weight: bold;
+  }
+  
+  input {
+    height: 25px;
+  }
+  
+  
