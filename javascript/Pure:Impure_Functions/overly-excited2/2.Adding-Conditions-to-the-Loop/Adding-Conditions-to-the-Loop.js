@@ -1,22 +1,26 @@
 // Create an array that contains the words in the sentence
-var sentence = ["I", "love", "to", "eat", "mocha", "icecream"];
+let sentence = ["The", "walrus", "danced", "through", "the", "trees", "in", "the", "light", "of", "the", "moon"]
 
 /*
-    The addExcitement function should be an impure function, and accept 
-    the array as the sole argument. It should iterate over the array 
+    The addExcitement function should be an impure function, and accept
+    the array as the sole argument. It should iterate over the array
     and output the words to the browser console.
 */
-function addExcitement(theWordArray) {
-  let row = "";
+function addExcitement (theWordArray) {
+    let row = " "
+    
+    for (let i = 0; i < sentence.length; i++) {
+        let currentWord = sentence[i];
+        row += currentWord += " "
+        console.log(row)
 
-  for (let i = 0; i < theWordArray.length; i++) {
-    row += theWordArray[i];
-    if (i % 3 === 2) {
-      row += "!";
+        if (i % 3 === 2) {
+          
+        }
     }
-    row += " ";
-    console.log(row);
-  }
+    
+
+
 }
 
 // Invoke the function and pass in the array
