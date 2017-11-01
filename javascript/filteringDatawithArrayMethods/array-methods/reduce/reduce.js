@@ -1,3 +1,4 @@
+
 // every (stops looping the first time the iterator returns false or something falsey)
 // some (stops looping the first time the iterator returns true or something truthy)
 // filter (creates a new array including elements where the filter function returns true and omitting the ones where it returns false)
@@ -15,35 +16,19 @@
 // The includes() method determines whether an array includes a certain element, returning true or false as appropriate.
 
 
-/* Requirements
+// Use the reduce method to create a sentence from the words in the following array
+const words = ["The", "early", "bird", "might", "get", "the", "worm", "but", "the", "second", "mouse", "gets", "the", "cheese"]
 
-Using one single line of JavaScript code, complete the following tasks on the array of integers below.
+const sentence = words.reduce(function(str, word) {
+    return str + " " + word 
+    
 
-1. Sort the numbers in descending order (10, 9, 8, 7, etc).
-2. Remove any integers greater than 19.
-3. Multiply each remaining number by 1.5 and then subtract 1.
-4. Then output (either in the DOM or the console) the sum of all the resulting numbers. */
-
-const integers = [13, 25, 6, 3, 11, 2, 18, 7, 21, 1, 29, 20, 12, 8];
-
-const sorted = integers.sort(function(a, b){return a - b})
-
-const filterd = integers.filter(function(num){
-    return num < 19 
 })
-console.log(filterd)
+sentence
 
+/* const sentence = words.reduce(function(str, word, index) {
+    return index == 0 ? srt : str + " " + word 
+    
 
-
-const outPut = filterd.map(function(amount){
-    return amount * 1.5 - 1
 })
-console.log(outPut)
-
-const totalOutPut = outPut.reduce(function(total, amount){
-    return total + amount 
-})
-
-console.log(totalOutPut)
-
-
+sentence */

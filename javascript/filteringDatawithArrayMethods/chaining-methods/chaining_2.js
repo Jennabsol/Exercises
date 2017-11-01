@@ -1,9 +1,11 @@
+// The forEach() method executes a provided function once for each array element.
 // every (stops looping the first time the iterator returns false or something falsey)
 // some (stops looping the first time the iterator returns true or something truthy)
 // filter (creates a new array including elements where the filter function returns true and omitting the ones where it returns false)
 // map (creates a new array from the values returned by the iterator function)
 // reduce (builds up a value by repeated calling the iterator, passing in previous values; see the spec for the details; useful for summing the contents of an array and many other things)
 // reduceRight (like reduce, but works in descending rather than ascending order)
+// sort() method sorts the elements of an array in place and returns the array.
 
 
 // The split() method is used to split a String object into an array of strings by separating the string into substrings.
@@ -24,26 +26,20 @@ Using one single line of JavaScript code, complete the following tasks on the ar
 3. Multiply each remaining number by 1.5 and then subtract 1.
 4. Then output (either in the DOM or the console) the sum of all the resulting numbers. */
 
+// In ES6 syntax we replace the word function with a “fat arrow” (=>) after the parameters, and we omit the word ‘return’ and {}.
+
 const integers = [13, 25, 6, 3, 11, 2, 18, 7, 21, 1, 29, 20, 12, 8];
 
-const sorted = integers.sort(function(a, b){return a - b})
+const sorted = integers.sort((a, b) =>  a - b )
 
-const filterd = integers.filter(function(num){
-    return num < 19 
-})
-console.log(filterd)
+const filterd = integers.filter((num) => num < 19)
 
+const outPut = filterd.map((amount) => amount * 1.5 - 1)
 
 
-const outPut = filterd.map(function(amount){
-    return amount * 1.5 - 1
-})
-console.log(outPut)
+const totalAmountIntegers = outPut.reduce((total, amount) =>
+ total + amount)
 
-const totalOutPut = outPut.reduce(function(total, amount){
-    return total + amount 
-})
-
-console.log(totalOutPut)
+console.log(totalAmountIntegers)
 
 

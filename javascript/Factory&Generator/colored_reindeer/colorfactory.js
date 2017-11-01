@@ -27,7 +27,8 @@ const reindeerColorGenerator = function* () {
 
 // Next we need to create an instance where when called the 
 // sequence of the generator can be called. We are basically 
-// storing the iterator or sequence in a letiable that we declare.
+// storing the iterator or sequence in a variable that we declare.
+// It's a placeholder to hold current state.
 const reindeerColorIterator = reindeerColorGenerator()
 // console.log(reindeerColorIterator.next().value)
 
