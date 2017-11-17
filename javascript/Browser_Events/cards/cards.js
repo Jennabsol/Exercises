@@ -10,15 +10,3 @@
 2. Remember your factory and generator functions. Generator should yield a unique identifier. Factory should generate DOM string.
 3. You can't attach an event listener to an element until it has been added to the DOM. */
 
-
-const outputEl = document.getElementById("output-target")
-
-const buttonEl = document.getElementById("create")
- 
-let textValueEl = document.getElementById("text_box").value
-
-buttonEl.addEventListener("click", function(event){
-    outputEl.innerHTML = textValueEl
-    console.log(event)
-})
-const x = 1
